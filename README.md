@@ -57,7 +57,7 @@ Your code lives in its own folder, completely outside Isaac Lab. It just imports
 ```
 
 - select project path
-- select project name
+- select project name: in this example I'm using `Myisaaclabproject2`
 - select a workflow type: manager-based vs direct or all (`all` in this example)
 - Choose RL library: backend and algorithm. using rl_games and rsl_rl in this example
 
@@ -96,7 +96,7 @@ C:.
    - `pip install -e` adds your project folder to Python's search path within that specific conda environment. Now Python knows: "when someone imports your_project, look in `/path/to/your/project`"
  2- Registers your environments on Gymnnasium: runs the `gym.register()` function in your `__init__.py` file (more about Gymnasium here: https://github.com/marcelpatrick/isaaclab-rl-manager-workflow-simple#2-register-the-environment-on-gymnasium)
 
-Inside your project folder, run: `C:\Users\[YOUR USER]\MyIsaacLabProject>python -m pip install -e source/MyIsaacLabProject`
+Inside your project folder, run: `C:\Users\[YOUR USER]\MyIsaacLabProject2>python -m pip install -e source/MyIsaacLabProject2`
  
 - list available environments: `python scripts/list_envs.py`
 
@@ -104,5 +104,5 @@ Inside your project folder, run: `C:\Users\[YOUR USER]\MyIsaacLabProject>python 
 ## 3. Run a training task
 
 On the Anaconda Prompt terminal, go to your projects root folder and run:
-eg. `python scripts/rsl_rl/train.py --task=Template-Myisaaclabproject-Direct-v0`
+eg. `(env_isaaclab) C:\Users\[YOUR USER]\MyIsaacLabProject2>python scripts/rsl_rl/train.py --task=Template-Myisaaclabproject2-v0`
 
