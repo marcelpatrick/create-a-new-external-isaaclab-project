@@ -76,7 +76,10 @@ MyRobotProject/                    ← Your folder (separate from IsaacLab)
 │
 └── README.md
 ```
-
+- select project path
+- select project name
+- select a workflow type: manager based vs direct (`manager-based` in this example)
+- Choose RL library: backend (eg. `skrl`) and algorithm (eg. `ppo`)
 
 
  # 2. Install the Project
@@ -91,9 +94,6 @@ Inside your project folder, run: `C:\Users\[YOUR USER]\MyIsaacLabProject>python 
  
 - list available environments: `python scripts/list_envs.py`
 
-- select a workflow type: manager vs direct (`manager` in this example)
-
-- Choose RL library: backend (eg. `skrl`) and algorithm (eg. `ppo`)
 
 ## 3. Run a training task
 
