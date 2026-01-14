@@ -9,7 +9,8 @@ This tutorial build on LyncheeAI's tutorial (https://lycheeai-hub.com/isaac-lab/
 - type `isaaclab.bat --new` (on windows)
 - select a task type (using `external` in this case)
 
-Differences: External vs Internal projects
+## Differences: External vs Internal projects
+
 Option A: Internal task (modifying Isaac Lab directly)
 You add your code inside the Isaac Lab repository itself.
 ```
