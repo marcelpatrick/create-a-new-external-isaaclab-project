@@ -56,31 +56,38 @@ Your code lives in its own folder, completely outside Isaac Lab. It just imports
 └─────────────────────────────────────────┘
 ```
 
-When you run `./isaaclab.sh --new` and choose "external," it generates this:
-
-```
-MyRobotProject/                    ← Your folder (separate from IsaacLab)
-│
-├── scripts/
-│   ├── train.py                   ← You run this
-│   └── play.py                    ← Test trained policy
-│
-├── source/
-│   └── my_robot_project/
-│       └── tasks/
-│           └── direct/
-│               └── my_task/
-│                   ├── __init__.py           ← Registers task with gym
-│                   ├── my_task_env.py        ← Defines the environment
-│                   └── my_task_env_cfg.py    ← Config (which robot, rewards)
-│
-└── README.md
-```
+When you run `./isaaclab.sh --new` and choose "external,"
 - select project path
 - select project name
-- select a workflow type: manager based vs direct (`manager-based` in this example)
-- Choose RL library: backend (eg. `skrl`) and algorithm (eg. `ppo`)
+- select a workflow type: manager-based vs direct or all (`all` in this example)
+- Choose RL library: backend and algorithm. using rl_games and rsl_rl in this example
 
+ it generates this:
+
+```
+C:.
+├───.vscode
+│   └───tools
+├───scripts
+│   ├───rl_games
+│   └───rsl_rl
+│       └───__pycache__
+└───source
+    └───MyIsaacLabProject2
+        ├───config
+        ├───docs
+        └───MyIsaacLabProject2
+            └───tasks
+                ├───direct
+                │   ├───myisaaclabproject2
+                │   │   └───agents
+                │   └───myisaaclabproject2_marl
+                │       └───agents
+                └───manager_based
+                    └───myisaaclabproject2
+                        ├───agents
+                        └───mdp
+```
 
  # 2. Install the Project
  
