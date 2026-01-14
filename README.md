@@ -56,13 +56,12 @@ Your code lives in its own folder, completely outside Isaac Lab. It just imports
 └─────────────────────────────────────────┘
 ```
 
-When you run `./isaaclab.sh --new` and choose "external,"
 - select project path
 - select project name
 - select a workflow type: manager-based vs direct or all (`all` in this example)
 - Choose RL library: backend and algorithm. using rl_games and rsl_rl in this example
 
- it generates this:
+ It generates this:
 
 ```
 C:.
