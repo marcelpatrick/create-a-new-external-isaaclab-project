@@ -61,7 +61,7 @@ name = "my-isaac-lab-project"
 version = "0.1.0"
 description = "My custom Isaac Lab environment"
 requires-python = ">=3.10"
-# ********* ISAACLAB VERBSION GOES HERE: *********
+# ********* ISAACLAB VERSION GOES HERE: *********
 dependencies = [
     "isaaclab==2.0.0",  # Pin to a specific version
 ]
