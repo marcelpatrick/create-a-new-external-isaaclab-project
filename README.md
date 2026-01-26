@@ -5,6 +5,8 @@ This tutorial build on LyncheeAI's tutorial (https://lycheeai-hub.com/isaac-lab/
 # 1. Download the project structure and it's template python scripts
 
 - Open Anaconda prompt
+- Activate your isaaclab python environment `conda activate env_isaaclab`
+-   If you haven't created your env yet check this turorial: https://github.com/marcelpatrick/IsaacSim-IsaacLab-installation-for-Windows-Easy-Tutorial?search=1 
 - navigate to the root `(env_isaaclab) C:\Users\[YOUR USER]\IsaacLab>.` of the isaaclab project with `cd isaaclab`
 - type `isaaclab.bat --new` (on windows)
 - select a task type (using `external` in this case)
