@@ -2,19 +2,13 @@
 
 This tutorial build on LyncheeAI's tutorial (https://lycheeai-hub.com/isaac-lab/build-your-own-isaac-lab-external-project-template-generator) and tries to present some of the concepts in a more beginner friendly way.
 
-# 1. Download the project structure and it's template python scripts
+It allows us to create an External IsaacLab Project:
 
-- Open Anaconda prompt
-- Activate your isaaclab python environment `conda activate env_isaaclab`
-  - If you haven't created your env yet check this turorial: https://github.com/marcelpatrick/IsaacSim-IsaacLab-installation-for-Windows-Easy-Tutorial?search=1 
-- navigate to the root `(env_isaaclab) C:\Users\[YOUR USER]\IsaacLab>.` of the isaaclab project with `cd isaaclab`
-- type `isaaclab.bat --new` (on windows)
-- select a task type (using `external` in this case)
+# 0. Differences: External vs Internal projects
 
-## Differences: External vs Internal projects
-
-Option A: Internal task (modifying Isaac Lab directly)
-You add your code inside the Isaac Lab repository itself.
+### Option A: Internal Project: (input your code into your local IsaacSim project) 
+You have to clone the original IsaacLab project to your local machine. 
+You add your code inside the IsaacLab project structure itself (inside the IsaacLab project folders) modifying your IsaacLab instance. 
 ```
 IsaacLab/
 ├── source/
@@ -23,10 +17,11 @@ IsaacLab/
 │   │   │   ├── ... (official Isaac Lab tasks)
 │   │   │   └── your_cube_stacking_task/  ← You add your stuff here
 ```
-Problem: If NVIDIA releases Isaac Lab v2.0, you have to manually merge your changes with their updates. Messy.
+Problem: If NVIDIA releases IsaacLab v2.0, you have to manually merge your changes with their updates. Makes it more messy to find all the changes they made to the IsaacSim project and how they conflict with your code because now you modified the IsaacSim project itself in your local instance.
 
-Option B: External project (your own separate folder)
-Your code lives in its own folder, completely outside Isaac Lab. It just imports Isaac Lab as a dependency.
+### Option B: External project (your own separate folder)
+Your code lives in its own folder, completely outside the IsaacLab project. Doesn't modify IsaacLab's original folder structure.
+It imports Isaac Lab as a library dependency.
 
 ```
 ┌─────────────────────────────────────────┐
@@ -57,7 +52,32 @@ Your code lives in its own folder, completely outside Isaac Lab. It just imports
 │  └── ...                                │
 └─────────────────────────────────────────┘
 ```
+Benefit: If Nvidia releases an update, it is easier and cleaner to update because you just have to point the settings in your project's config file to the new IsaacLab version - since you didn't modify the original IsaacLab code or folder structure. 
 
+```py
+[project]
+name = "my-isaac-lab-project"
+version = "0.1.0"
+description = "My custom Isaac Lab environment"
+requires-python = ">=3.10"
+# ********* ISAACLAB VERBSION GOES HERE: *********
+dependencies = [
+    "isaaclab==2.0.0",  # Pin to a specific version
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+```
+
+# 1. Download the project structure and it's template python scripts
+
+- Open Anaconda prompt
+- Activate your isaaclab python environment `conda activate env_isaaclab`
+  - If you haven't created your env yet check this turorial: https://github.com/marcelpatrick/IsaacSim-IsaacLab-installation-for-Windows-Easy-Tutorial?search=1 
+- navigate to the root `(env_isaaclab) C:\Users\[YOUR USER]\IsaacLab>.` of the isaaclab project with `cd isaaclab`
+- type `isaaclab.bat --new` (on windows)
+- select a task type (using `external` in this case)
 - select project path
 - select project name: in this example I'm using `Myisaaclabproject2`
 - select a workflow type: manager-based vs direct or all (`all` in this example)
