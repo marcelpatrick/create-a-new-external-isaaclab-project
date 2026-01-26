@@ -54,6 +54,7 @@ It imports Isaac Lab as a Python library dependency and accesses IsaacLab featur
 └─────────────────────────────────────────┘
 ```
 Benefit: If Nvidia releases an update, it is easier and cleaner to update because you just have to point the settings in your project's config file to the new IsaacLab version - since you didn't modify the original IsaacLab code or folder structure. 
+Dependency configs are defined inside the file: `extension.toml`
 
 ```py
 [project]
