@@ -21,7 +21,8 @@ Problem: If NVIDIA releases IsaacLab v2.0, you have to manually merge your chang
 
 ### Option B: External project (your own separate folder)
 Your code lives in its own folder, completely outside the IsaacLab project. Doesn't modify IsaacLab's original folder structure.
-It imports Isaac Lab as a library dependency.
+You don't need to clone the IsaacLab project repo locally to your computer.
+It imports Isaac Lab as a Python library dependency and accesses IsaacLab features through this library.
 
 ```
 ┌─────────────────────────────────────────┐
