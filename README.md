@@ -2,7 +2,9 @@
 
 This tutorial build on LyncheeAI's tutorial (https://lycheeai-hub.com/isaac-lab/build-your-own-isaac-lab-external-project-template-generator) and tries to present some of the concepts in a more beginner friendly way.
 
-It allows us to create an External IsaacLab Project:
+It allows us to create an External IsaacLab Project
+
+- Pre requisites: Install IsaacLab and create a python environment: https://github.com/marcelpatrick/IsaacSim-IsaacLab-installation-for-Windows-Easy-Tutorial?search=1. (original IsaacLab project: https://github.com/isaac-sim/IsaacLab.git ) 
 
 # 0. Differences: External vs Internal projects
 
@@ -78,7 +80,7 @@ build-backend = "setuptools.build_meta"
 - Activate your isaaclab python environment `conda activate env_isaaclab`
   - If you haven't created your env yet check this turorial: https://github.com/marcelpatrick/IsaacSim-IsaacLab-installation-for-Windows-Easy-Tutorial?search=1 
 - navigate to the root `(env_isaaclab) C:\Users\[YOUR USER]\IsaacLab>.` of the isaaclab project with `cd isaaclab`
-- type `isaaclab.bat --new` (on windows)
+- Run the Template Wizard (it comes with the IsaacLab project previously installed: type `isaaclab.bat --new` (on windows)
 - select a task type (using `external` in this case)
 - select project path
 - select project name: in this example I'm using `Myisaaclabproject2`
