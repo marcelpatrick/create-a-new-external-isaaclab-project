@@ -114,6 +114,9 @@ C:.
                         └───mdp
 ```
 
+The generated foler `myusaaclabproject2` (path: `"C:\Users\[YOUR USER]\MyIsaacLabProject2\source\MyIsaacLabProject2\MyIsaacLabProject2\tasks\manager_based\myisaaclabproject2"`) actually contains the cartpole task. Template manager automatically generates this task by default for testing purposes. 
+- rename this folder to `cartpole` for consistency - as we will add other tasks to the folder structure. 
+
  # 2. Install the Project
  
  Now that you downloaded the templated project you need to install it. This does:
