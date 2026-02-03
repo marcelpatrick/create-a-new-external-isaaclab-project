@@ -119,19 +119,23 @@ The generated foler `myusaaclabproject2` (path: `"C:\Users\[YOUR USER]\MyIsaacLa
 
  # 2. Install the Project
  
- Now that you downloaded the templated project you need to install it. This does:
+ Now that you downloaded the templated project you need to install it. 
  
+ Inside your project folder, run: `C:\Users\[YOUR USER]\MyIsaacLabProject2>python -m pip install -e source/MyIsaacLabProject2
+ 
+ This does:
  1- installs your project as a Python package in your local Python environment (`env_isaaclab` in this example) - making your project's code discoverable by Python and importable
    - `pip install -e` adds your project folder to Python's search path within that specific conda environment. Now Python knows: "when someone imports your_project, look in `/path/to/your/project`"
  2- Registers your environments on Gymnnasium: runs the `gym.register()` function in your `__init__.py` file (more about Gymnasium here: https://github.com/marcelpatrick/isaaclab-rl-manager-workflow-simple#2-register-the-environment-on-gymnasium)
-
-Inside your project folder, run: `C:\Users\[YOUR USER]\MyIsaacLabProject2>python -m pip install -e source/MyIsaacLabProject2`
  
-- list available environments: `python scripts/list_envs.py`
-
+List available environments: `python scripts/list_envs.py`
+- you should see your project listed
 
 ## 3. Run a training task
 
 On the Anaconda Prompt terminal, go to your projects root folder and run:
 eg. `(env_isaaclab) C:\Users\[YOUR USER]\MyIsaacLabProject2>python scripts/rsl_rl/train.py --task=Template-Myisaaclabproject2-v0`
 
+- This will depend on which library you have installed. Eg. if you have rl_games instead of rsl_rl, run: `(env_isaaclab) C:\Users\[YOUR USER]\MyIsaacLabProject2>python scripts/rl_games/train.py --task=Template-Myisaaclabproject2-v0`
+
+Stop with `Ctrl C`
