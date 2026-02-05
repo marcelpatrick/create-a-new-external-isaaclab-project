@@ -80,7 +80,7 @@ build-backend = "setuptools.build_meta"
 - Activate your isaaclab python environment `conda activate env_isaaclab`
   - If you haven't created your env yet check this turorial: https://github.com/marcelpatrick/IsaacSim-IsaacLab-installation-for-Windows-Easy-Tutorial?search=1 
 - navigate to the root `(env_isaaclab) C:\Users\[YOUR USER]\IsaacLab>.` of the isaaclab project with `cd isaaclab`
-- Run the Template Wizard (it comes with the IsaacLab project previously installed: type `isaaclab.bat --new` (on windows)
+- Run the Template Wizard (it comes with the IsaacLab project previously installed: type `isaaclab.bat --new` (on windows) or `.\isaaclab.bat --new` on anaconda powershell
 - select a task type (using `external` in this case)
 - select project path
 - select project name: in this example I'm using `MyIsaacLabProject`
