@@ -83,7 +83,7 @@ build-backend = "setuptools.build_meta"
 - Run the Template Wizard (it comes with the IsaacLab project previously installed: type `isaaclab.bat --new` (on windows)
 - select a task type (using `external` in this case)
 - select project path
-- select project name: in this example I'm using `Myisaaclabproject2`
+- select project name: in this example I'm using `MyIsaacLabProject`
 - select a workflow type: manager-based vs direct or all (`all` in this example)
 - Choose RL library: backend and algorithm. using rl_games and rsl_rl in this example
 
@@ -98,30 +98,30 @@ C:.
 │   └───rsl_rl
 │       └───__pycache__
 └───source
-    └───MyIsaacLabProject2
+    └───MyIsaacLabProject
         ├───config
         ├───docs
-        └───MyIsaacLabProject2
+        └───MyIsaacLabProject
             └───tasks
                 ├───direct
-                │   ├───myisaaclabproject2
+                │   ├───MyIsaacLabProject
                 │   │   └───agents
-                │   └───myisaaclabproject2_marl
+                │   └───MyIsaacLabProject_marl
                 │       └───agents
                 └───manager_based
-                    └───myisaaclabproject2
+                    └───MyIsaacLabProject
                         ├───agents
                         └───mdp
 ```
 
-The generated foler `myusaaclabproject2` (path: `"C:\Users\[YOUR USER]\MyIsaacLabProject2\source\MyIsaacLabProject2\MyIsaacLabProject2\tasks\manager_based\myisaaclabproject2"`) actually contains the cartpole task. Template manager automatically generates this task by default for testing purposes. 
+The generated foler `myusaaclabproject2` (path: `"C:\Users\[YOUR USER]\MyIsaacLabProject\source\MyIsaacLabProject\MyIsaacLabProject\tasks\manager_based\MyIsaacLabProject"`) actually contains the cartpole task. Template manager automatically generates this task by default for testing purposes. 
 - rename this folder to `cartpole` for consistency - as we will add other tasks to the folder structure. 
 
  # 2. Install the Project
  
  Now that you downloaded the templated project you need to install it. 
  
- Inside your project folder, run: `C:\Users\[YOUR USER]\MyIsaacLabProject2>python -m pip install -e source/MyIsaacLabProject2
+ Inside your project folder, run: `C:\Users\[YOUR USER]\[YOUR PROJECT NAME]>python -m pip install -e source/[YOUR PROJECT NAME]` - eg: `C:\Users\[YOUR USER]\MyIsaacLabProject>python -m pip install -e source/MyIsaacLabProject`
  
  This does:
  1- installs your project as a Python package in your local Python environment (`env_isaaclab` in this example) - making your project's code discoverable by Python and importable
@@ -134,8 +134,8 @@ List available environments: `python scripts/list_envs.py`
 ## 3. Run a training task
 
 On the Anaconda Prompt terminal, go to your projects root folder and run:
-eg. `(env_isaaclab) C:\Users\[YOUR USER]\MyIsaacLabProject2>python scripts/rsl_rl/train.py --task=Template-Myisaaclabproject2-v0`
+eg. `(env_isaaclab) C:\Users\[YOUR USER]\MyIsaacLabProject>python scripts/rsl_rl/train.py --task=Template-MyIsaacLabProject-v0`
 
-- This will depend on which library you have installed. Eg. if you have rl_games instead of rsl_rl, run: `(env_isaaclab) C:\Users\[YOUR USER]\MyIsaacLabProject2>python scripts/rl_games/train.py --task=Template-Myisaaclabproject2-v0`
+- This will depend on which library you have installed. Eg. if you have rl_games instead of rsl_rl, run: `(env_isaaclab) C:\Users\[YOUR USER]\MyIsaacLabProject>python scripts/rl_games/train.py --task=Template-MyIsaacLabProject-v0`
 
 Stop with `Ctrl C`
