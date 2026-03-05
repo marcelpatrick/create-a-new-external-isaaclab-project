@@ -133,9 +133,18 @@ List available environments: `python scripts/list_envs.py`
 
 ## 3. Run a training task
 
-On the Anaconda Prompt terminal, go to your projects root folder and run:
-eg. `(env_isaaclab) C:\Users\[YOUR USER]\MyIsaacLabProject>python scripts/rsl_rl/train.py --task=Template-MyIsaacLabProject-v0`
-
-- This will depend on which library you have installed. Eg. if you have rl_games instead of rsl_rl, run: `(env_isaaclab) C:\Users\[YOUR USER]\MyIsaacLabProject>python scripts/rl_games/train.py --task=Template-MyIsaacLabProject-v0`
+Open Anaconda Prompt: conda activate env_isaaclab
+- To just open isaacsim type: `Isaacsim`
+- To just open the IsaacLab project in vscode type: `code MyIsaacLabProject`
+- To run the cartpole task that comes by default in the cloned project: 
+  - From the root folder run: `python MyIsaacLabProject2/scripts/rsl_rl/train.py --task=Template-Myisaaclabproject2-v0` Or navigate to the project folder `cd MyIsaacLabProject` and from there run `python scripts/rsl_rl/train.py --task=Template-Myisaaclabproject-v0`
+    
+- The correct path for running the project will also depend on which library you have installed. Eg. if you have rl_games instead of rsl_rl, run: `(env_isaaclab) C:\Users\[YOUR USER]\MyIsaacLabProject>python scripts/rl_games/train.py --task=Template-MyIsaacLabProject-v0`
 
 Stop with `Ctrl C`
+
+### Errors
+- If you get something like `couldn’t access: MyIsaacLabProject` make sure the project was installed (refer to “2. Install the Project” in https://github.com/marcelpatrick/create-a-new-external-isaaclab-project/blob/main/README.md) 
+- If you get something like ``gymnasium.error.VersionNotFound: Environment version `v32` for environment `Template-Myisaaclabproject2` doesn't exist.`` OR  ``gymnasium.error.NameNotFound: Environment `Template-Myisaasdfsdfg` doesn't exist.`` make sure your **project ID** is correct. -> Copy it from `C:\Users\[YOUR USER]\MyIsaacLabProject\source\MyIsaacLabProject\MyIsaacLabProject\tasks\manager_based\myisaaclabproject\__init__.py` > `id="Template-Myisaaclabproject2-v0"`
+
+
