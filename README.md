@@ -145,6 +145,6 @@ Stop with `Ctrl C`
 
 ### Errors
 - If you get something like `couldn’t access: MyIsaacLabProject` make sure the project was installed (refer to “2. Install the Project” in https://github.com/marcelpatrick/create-a-new-external-isaaclab-project/blob/main/README.md) 
-- If you get something like ``gymnasium.error.VersionNotFound: Environment version `v32` for environment `Template-Myisaaclabproject2` doesn't exist.`` OR  ``gymnasium.error.NameNotFound: Environment `Template-Myisaasdfsdfg` doesn't exist.`` make sure your **project ID** is correct. -> Copy it from `C:\Users\[YOUR USER]\MyIsaacLabProject\source\MyIsaacLabProject\MyIsaacLabProject\tasks\manager_based\myisaaclabproject\__init__.py` > `id="Template-Myisaaclabproject2-v0"`
+- If you get something like ``gymnasium.error.VersionNotFound: Environment version `v32` for environment `Template-Myisaaclabproject2` doesn't exist.`` OR  ``gymnasium.error.NameNotFound: Environment `Template-Myisaasdfsdfg` doesn't exist.`` make sure your **TASK ID** is correct. -> Copy it from `C:\Users\[YOUR USER]\MyIsaacLabProject\source\MyIsaacLabProject\MyIsaacLabProject\tasks\manager_based\myisaaclabproject\__init__.py` > `id="Template-Myisaaclabproject2-v0"`
 
 
