@@ -134,7 +134,6 @@ List available environments with `python scripts/list_envs.py`: `C:\Users\[YOUR 
 ## 3. Run a training task
 
 Open Anaconda Prompt: conda activate env_isaaclab
-- To just open Isaacsim type: `Isaacsim`
 - To just open the IsaacLab project in vscode type: `code MyIsaacLabProject`
 - To run the cartpole task that comes by default in the cloned project: 
   - From the root folder run: `python MyIsaacLabProject/scripts/rsl_rl/train.py --task=Template-Myisaaclabproject-v0` Or navigate to the project folder `cd MyIsaacLabProject` and from there run `python scripts/rsl_rl/train.py --task=Template-Myisaaclabproject-v0`
