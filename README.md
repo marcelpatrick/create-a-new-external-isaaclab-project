@@ -80,10 +80,10 @@ build-backend = "setuptools.build_meta"
 - Activate your isaaclab python environment `conda activate env_isaaclab`
   - If you haven't created your env yet check this turorial: https://github.com/marcelpatrick/IsaacSim-IsaacLab-installation-for-Windows-Easy-Tutorial?search=1 
 - navigate to the root `(env_isaaclab) C:\Users\[YOUR USER]\IsaacLab>.` of the isaaclab project with `cd isaaclab`
-- Run the Template Wizard (it comes with the IsaacLab project previously installed: type `isaaclab.bat --new` (on windows) or `.\isaaclab.bat --new` on anaconda powershell
+- Run the Template Wizard (it comes with the IsaacLab project previously installed: type `isaaclab.bat --new` (on windows) or `.\isaaclab.bat --new` on Anaconda PowerShell
 - select a task type (using `external` in this case)
 - select project path
-- select project name: in this example I'm using `MyIsaacLabProject`
+- select project name: in this example, I'm using `MyIsaacLabProject`
 - select a workflow type: manager-based vs direct or all (`all` in this example)
 - Choose RL library: backend and algorithm. using rl_games and rsl_rl in this example
 
@@ -114,8 +114,8 @@ C:.
                         └───mdp
 ```
 
-The generated foler `myusaaclabproject2` (path: `"C:\Users\[YOUR USER]\MyIsaacLabProject\source\MyIsaacLabProject\MyIsaacLabProject\tasks\manager_based\MyIsaacLabProject"`) actually contains the cartpole task. Template manager automatically generates this task by default for testing purposes. 
-- rename this folder to `cartpole` for consistency - as we will add other tasks to the folder structure. 
+The generated folder (path: `"C:\Users\[YOUR USER]\MyIsaacLabProject\source\MyIsaacLabProject\MyIsaacLabProject\tasks\manager_based\MyIsaacLabProject"`) actually contains the cartpole task. Template manager automatically generates this task by default for testing purposes. 
+- Rename this folder to `cartpole` for consistency - as we will add other tasks to the folder structure. 
 
  # 2. Install the Project
  
@@ -128,13 +128,13 @@ The generated foler `myusaaclabproject2` (path: `"C:\Users\[YOUR USER]\MyIsaacLa
    - `pip install -e` adds your project folder to Python's search path within that specific conda environment. Now Python knows: "when someone imports your_project, look in `/path/to/your/project`"
  2- Registers your environments on Gymnnasium: runs the `gym.register()` function in your `__init__.py` file (more about Gymnasium here: https://github.com/marcelpatrick/isaaclab-rl-manager-workflow-simple#2-register-the-environment-on-gymnasium)
  
-List available environments: `python scripts/list_envs.py`
+List available environments with `python scripts/list_envs.py`: `C:\Users\[YOUR USER]\[YOUR PROJECT NAME]>python scripts/list_envs.py`
 - you should see your project listed
 
 ## 3. Run a training task
 
 Open Anaconda Prompt: conda activate env_isaaclab
-- To just open isaacsim type: `Isaacsim`
+- To just open Isaacsim type: `Isaacsim`
 - To just open the IsaacLab project in vscode type: `code MyIsaacLabProject`
 - To run the cartpole task that comes by default in the cloned project: 
   - From the root folder run: `python MyIsaacLabProject/scripts/rsl_rl/train.py --task=Template-Myisaaclabproject-v0` Or navigate to the project folder `cd MyIsaacLabProject` and from there run `python scripts/rsl_rl/train.py --task=Template-Myisaaclabproject-v0`
