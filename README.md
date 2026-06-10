@@ -132,7 +132,7 @@ The generated folder (path: `"C:\Users\[YOUR USER]\MyIsaacLabProject\source\MyIs
 List available environments with `python scripts/list_envs.py`: `C:\Users\[YOUR USER]\[YOUR PROJECT NAME]>python scripts/list_envs.py`
 - you should see your project listed
 
-## 3. Run a training task
+# 3. Run a training task
 
 Open Anaconda Prompt: conda activate env_isaaclab
 - To just open the IsaacLab project in vscode type: `code MyIsaacLabProject`
