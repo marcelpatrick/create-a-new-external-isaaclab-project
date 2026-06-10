@@ -74,7 +74,8 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 ```
 
-# 1. Download the project structure and it's template python scripts
+# 1. Create a new external project using the Template Wizard
+- This will download the project structure and its template python scripts
 
 - Open Anaconda prompt
 - Activate your isaaclab python environment `conda activate env_isaaclab`
@@ -135,7 +136,7 @@ List available environments with `python scripts/list_envs.py`: `C:\Users\[YOUR 
 
 Open Anaconda Prompt: conda activate env_isaaclab
 - To just open the IsaacLab project in vscode type: `code MyIsaacLabProject`
-- To run the cartpole task that comes by default in the cloned project: 
+- To run the cartpole task that comes by default in the cloned project: Here we will run the Cartpole task with its default Reinforcement Learning parameters.
   - From the root folder run: `python MyIsaacLabProject/scripts/rsl_rl/train.py --task=Template-Myisaaclabproject-v0` Or navigate to the project folder `cd MyIsaacLabProject` and from there run `python scripts/rsl_rl/train.py --task=Template-Myisaaclabproject-v0`
     
 - The correct path for running the project will also depend on which library you have installed. Eg. if you have rl_games instead of rsl_rl, run: `(env_isaaclab) C:\Users\[YOUR USER]\MyIsaacLabProject>python scripts/rl_games/train.py --task=Template-MyIsaacLabProject-v0`
@@ -146,4 +147,5 @@ Stop with `Ctrl C`
 - If you get something like `couldn’t access: MyIsaacLabProject` make sure the project was installed (refer to “2. Install the Project” in https://github.com/marcelpatrick/create-a-new-external-isaaclab-project/blob/main/README.md) 
 - If you get something like ``gymnasium.error.VersionNotFound: Environment version `v32` for environment `Template-Myisaaclabproject` doesn't exist.`` OR  ``gymnasium.error.NameNotFound: Environment `Template-Myisaasdfsdfg` doesn't exist.`` Make sure your **TASK ID** is correct. -> Copy it from `C:\Users\[YOUR USER]\MyIsaacLabProject\source\MyIsaacLabProject\MyIsaacLabProject\tasks\manager_based\myisaaclabproject\__init__.py` > `id="Template-Myisaaclabproject-v0"`
 
-
+# 4- Next Steps
+- After this, you can go to the next level, add new tasks to your project and customize their reward function and training parameters. Check: https://github.com/marcelpatrick/Custom-IsaacLab-Manager-based-External-project 
