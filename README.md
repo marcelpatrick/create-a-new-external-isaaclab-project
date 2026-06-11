@@ -30,7 +30,7 @@ Your external project imports IsaacLab as a Python library dependency and access
 
 ```
 ┌─────────────────────────────────────────┐
-│  YourCubeStackingProject/               │
+│  YourProject/Your task                  │
 │  (Your independent repo)                │
 │                                         │
 │  ├── scripts/                           │
