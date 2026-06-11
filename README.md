@@ -105,14 +105,12 @@ The generated folder (path: `"C:\Users\[YOUR USER]\MyIsaacLabProject\source\MyIs
 
  # 2. Install the Project
  
- Now that you downloaded the templated project you need to install it. 
+ Now that you have downloaded the templated project, you need to install it. 
  
  Inside your project folder, run: `C:\Users\[YOUR USER]\[YOUR PROJECT NAME]>` `python -m pip install -e source/[YOUR PROJECT NAME]` - eg: `C:\Users\[YOUR USER]\MyIsaacLabProject>` `python -m pip install -e source/MyIsaacLabProject`
  
- This does:
-- 1- installs your project as a Python package in your local Python environment (`env_isaaclab` in this example) - making your project's code discoverable by Python and importable
-   - `pip install -e` adds your project folder to Python's search path within that specific conda environment. Now Python knows: "when someone imports your_project, look in `/path/to/your/project`"
-- 2- Registers your environments on Gymnnasium: runs the `gym.register()` function in your `__init__.py` file (more about Gymnasium here: https://github.com/marcelpatrick/isaaclab-rl-manager-workflow-simple#2-register-the-environment-on-gymnasium)
+ - This installs your project as a Python package in your local Python environment (`env_isaaclab` in this example) - making your project's code discoverable by Python and importable as a library.  `pip install -e` adds your project folder to Python's search path within that specific conda environment. Now Python knows: "when someone imports your_project, look in `/path/to/your/project`"
+
  
 List available environments with `python scripts/list_envs.py`: `C:\Users\[YOUR USER]\[YOUR PROJECT NAME]>python scripts/list_envs.py`
 - you should see your project listed
