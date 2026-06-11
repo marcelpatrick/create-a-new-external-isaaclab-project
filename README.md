@@ -7,25 +7,26 @@
 # Prerequisites: 
 - Install IsaacLab and create a Python environment: https://github.com/marcelpatrick/IsaacSim-IsaacLab-installation-for-Windows-Easy-Tutorial?search=1. 
 
-# 0. Concepts: Differences between External and Internal projects
+# 0. Concepts: Running a custom task internally inside the IsaacLab Project vs on an External Project
 
-### Option A: Internal Project: (input your code into your local IsaacSim project) 
-You have to clone the original IsaacLab project to your local machine. 
-You add your code inside the IsaacLab project structure itself (inside the IsaacLab project folders) modifying your IsaacLab instance. 
+Let's say you want to create your own IsaacLab task: simulate a task of your choice, modify the Reinforcement Learning parameters, the robot policies etc. You have 2 options: 
+
+### Option A: Internal Run: (input your code into your local IsaacSim project) 
+After you clone the original IsaacLab project from NVIDIA's GitHub repository, you can modify this instance directly on your local machine, adding your custom task and code to your local IsaacLab project and its folder structure. It becomes available alongside all the built-in tasks:
+
 ```
 IsaacLab/
 ├── source/
 │   ├── extensions/
 │   │   ├── omni.isaac.lab_tasks/
-│   │   │   ├── ... (official Isaac Lab tasks)
-│   │   │   └── your_cube_stacking_task/  ← You add your stuff here
+│   │   │   ├── ... (official built in Isaac Lab tasks)
+│   │   │   └── your_task/  ← You add your stuff here
 ```
-Problem: If NVIDIA releases IsaacLab v2.0, you have to manually merge your changes with their updates. Makes it more messy to find all the changes they made to the IsaacSim project and how they conflict with your code because now you modified the IsaacSim project itself in your local instance.
+**Problem**: If NVIDIA releases IsaacLab v2.0, you have to merge your changes with their updates manually. You would have to clone the new version to your computer and manually track where changes were made to make sure it works with your task. If they change the folder structure or how other scripts in the project communicate with tasks, it can break your code. Makes it messy to find all the changes they made to the project and how they conflict with your code.
 
 ### Option B: External project (your own separate folder)
 Your code lives in its own folder, completely outside the IsaacLab project. Doesn't modify IsaacLab's original folder structure.
-You don't need to clone the IsaacLab project repo locally to your computer.
-It imports Isaac Lab as a Python library dependency and accesses IsaacLab features through this library.
+You just have to import IsaacLab as a Python library dependency and access IsaacLab features through it.
 
 ```
 ┌─────────────────────────────────────────┐
@@ -56,8 +57,9 @@ It imports Isaac Lab as a Python library dependency and accesses IsaacLab featur
 │  └── ...                                │
 └─────────────────────────────────────────┘
 ```
-Benefit: If Nvidia releases an update, it is easier and cleaner to update because you just have to point the settings in your project's config file to the new IsaacLab version - since you didn't modify the original IsaacLab code or folder structure. 
-Dependency configs are defined inside the file: `extension.toml`
+**Benefit**: If Nvidia releases an update, all you have to do is clone the new version to your computer and register/install it. It is easier and cleaner to update because you just have to point the settings in your project's config file to the new IsaacLab version - since you didn't modify the original IsaacLab code or folder structure. 
+
+- Dependency configs are defined inside the file: `extension.toml`
 
 ```py
 [project]
