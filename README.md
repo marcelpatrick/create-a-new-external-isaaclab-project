@@ -118,10 +118,10 @@ The generated folder (path: `"C:\Users\[YOUR USER]\MyIsaacLabProject\source\MyIs
 
 # 3. Run a training task
 
-Open Anaconda Prompt: conda activate env_isaaclab
 - To just open the IsaacLab project in vscode type: `code MyIsaacLabProject`
-- To run the cartpole task that comes by default in the cloned project: Here we will run the Cartpole task with its default Reinforcement Learning parameters.
-  - From the root folder run: `python MyIsaacLabProject/scripts/rsl_rl/train.py --task=Template-Myisaaclabproject-v0` Or navigate to the project folder `cd MyIsaacLabProject` and from there run `python scripts/rsl_rl/train.py --task=Template-Myisaaclabproject-v0`
+- To run the cartpole task that comes by default in the cloned project - with its default Reinforcement Learning parameters.
+  - From the root folder run: `python MyIsaacLabProject/scripts/rsl_rl/train.py --task=Template-Myisaaclabproject-v0`
+  - Or navigate to the project folder `cd MyIsaacLabProject` and from there run `python scripts/rsl_rl/train.py --task=Template-Myisaaclabproject-v0`
     
 - The correct path for running the project will also depend on which library you have installed. Eg. if you have rl_games instead of rsl_rl, run: `(env_isaaclab) C:\Users\[YOUR USER]\MyIsaacLabProject>python scripts/rl_games/train.py --task=Template-MyIsaacLabProject-v0`
 
