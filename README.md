@@ -1,12 +1,13 @@
 # create-a-new-external-isaaclab-project
 
 This tutorial builds on LyncheeAI's tutorial (https://lycheeai-hub.com/isaac-lab/build-your-own-isaac-lab-external-project-template-generator) and presents concepts in a more beginner-friendly way.
+It uses the original IsaacLab project: https://github.com/isaac-sim/IsaacLab.git
+It allows you to create an External IsaacLab Project
 
-It allows us to create an External IsaacLab Project
+# Prerequisites: 
+- Install IsaacLab and create a Python environment: https://github.com/marcelpatrick/IsaacSim-IsaacLab-installation-for-Windows-Easy-Tutorial?search=1. 
 
-- Pre requisites: Install IsaacLab and create a python environment: https://github.com/marcelpatrick/IsaacSim-IsaacLab-installation-for-Windows-Easy-Tutorial?search=1. (original IsaacLab project: https://github.com/isaac-sim/IsaacLab.git ) 
-
-# 0. Differences: External vs Internal projects
+# 0. Concepts: Differences between External and Internal projects
 
 ### Option A: Internal Project: (input your code into your local IsaacSim project) 
 You have to clone the original IsaacLab project to your local machine. 
