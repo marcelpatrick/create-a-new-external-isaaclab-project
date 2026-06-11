@@ -26,7 +26,7 @@ IsaacLab/
 
 ### Option B: External project (your own separate folder)
 Your code lives in its own folder, completely outside the IsaacLab project. Doesn't modify IsaacLab's original folder structure.
-You just have to import IsaacLab as a Python library dependency and access IsaacLab features through it.
+Your external project imports IsaacLab as a Python library dependency and accesses IsaacLab features through it.
 
 ```
 ┌─────────────────────────────────────────┐
@@ -57,25 +57,7 @@ You just have to import IsaacLab as a Python library dependency and access Isaac
 │  └── ...                                │
 └─────────────────────────────────────────┘
 ```
-**Benefit**: If Nvidia releases an update, all you have to do is clone the new version to your computer and register/install it. It is easier and cleaner to update because you just have to point the settings in your project's config file to the new IsaacLab version - since you didn't modify the original IsaacLab code or folder structure. 
-
-- Dependency configs are defined inside the file: `extension.toml`
-
-```py
-[project]
-name = "my-isaac-lab-project"
-version = "0.1.0"
-description = "My custom Isaac Lab environment"
-requires-python = ">=3.10"
-# ********* ISAACLAB VERSION GOES HERE: *********
-dependencies = [
-    "isaaclab==2.0.0",  # Pin to a specific version
-]
-
-[build-system]
-requires = ["setuptools>=61.0", "wheel"]
-build-backend = "setuptools.build_meta"
-```
+**Benefit**: If Nvidia releases an update, all you have to do is clone the new version to your computer and register/install it. It is easier and cleaner to update because you just have to download and install a new IsaacLab version to your machine, no need to change your code.
 
 # 1. Create a new external project using the Template Wizard
 - This will download the project structure and its template python scripts
