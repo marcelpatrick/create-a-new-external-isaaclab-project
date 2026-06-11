@@ -64,9 +64,9 @@ Your external project imports IsaacLab as a Python library dependency and access
 
 - Open Anaconda prompt
 - Activate your isaaclab python environment `conda activate env_isaaclab`
-  - If you haven't created your env yet check this turorial: https://github.com/marcelpatrick/IsaacSim-IsaacLab-installation-for-Windows-Easy-Tutorial?search=1 
+  - If you haven't created your env yet, check this turorial: https://github.com/marcelpatrick/IsaacSim-IsaacLab-installation-for-Windows-Easy-Tutorial?search=1 
 - navigate to the root `(env_isaaclab) C:\Users\[YOUR USER]\IsaacLab>.` of the isaaclab project with `cd isaaclab`
-- Run the Template Wizard (it comes with the IsaacLab project previously installed: type `isaaclab.bat --new` (on windows) or `.\isaaclab.bat --new` on Anaconda PowerShell
+- Run the Template Wizard (it comes with the IsaacLab project previously installed) type `.\isaaclab.bat --new`
 - select a task type (using `external` in this case)
 - select project path
 - select project name: in this example, I'm using `MyIsaacLabProject`
@@ -107,7 +107,7 @@ The generated folder (path: `"C:\Users\[YOUR USER]\MyIsaacLabProject\source\MyIs
  
  Now that you downloaded the templated project you need to install it. 
  
- Inside your project folder, run: `C:\Users\[YOUR USER]\[YOUR PROJECT NAME]>python -m pip install -e source/[YOUR PROJECT NAME]` - eg: `C:\Users\[YOUR USER]\MyIsaacLabProject>python -m pip install -e source/MyIsaacLabProject`
+ Inside your project folder, run: `C:\Users\[YOUR USER]\[YOUR PROJECT NAME]>` `python -m pip install -e source/[YOUR PROJECT NAME]` - eg: `C:\Users\[YOUR USER]\MyIsaacLabProject>` `python -m pip install -e source/MyIsaacLabProject`
  
  This does:
  1- installs your project as a Python package in your local Python environment (`env_isaaclab` in this example) - making your project's code discoverable by Python and importable
