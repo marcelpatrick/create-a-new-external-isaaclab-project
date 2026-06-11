@@ -1,6 +1,6 @@
 # create-a-new-external-isaaclab-project
 
-This tutorial build on LyncheeAI's tutorial (https://lycheeai-hub.com/isaac-lab/build-your-own-isaac-lab-external-project-template-generator) and tries to present some of the concepts in a more beginner friendly way.
+This tutorial builds on LyncheeAI's tutorial (https://lycheeai-hub.com/isaac-lab/build-your-own-isaac-lab-external-project-template-generator) and presents concepts in a more beginner-friendly way.
 
 It allows us to create an External IsaacLab Project
 
