@@ -99,19 +99,24 @@ C:.
                         ├───agents
                         └───mdp
 ```
-
-The generated folder (path: `"C:\Users\[YOUR USER]\MyIsaacLabProject\source\MyIsaacLabProject\MyIsaacLabProject\tasks\manager_based\MyIsaacLabProject"`) actually contains the cartpole task. Template manager automatically generates this task by default for testing purposes. 
-- Rename this folder to `cartpole` for consistency - as we will add other tasks to the folder structure. 
+. External projects also come with template tasks by default: 
+. The generated folder (path: `"C:\Users\[YOUR USER]\MyIsaacLabProject\source\MyIsaacLabProject\MyIsaacLabProject\tasks\manager_based\MyIsaacLabProject"`) contains some template tasks
 
  # 2. Install the Project
  
- Now that you have downloaded the templated project, you need to install it. 
+ - Now that you have downloaded the templated project, you need to install it.
+ - The IsaacLab project comes with a template train.py script that is responsible for training any tasks with Reinforcement Learning. However, you need to specify which task it needs to train. You do it by passing the taskID. But for train.py to find the taskID for your custom task, your external project (containing your custom task) needs to be installed. 
  
  Inside your project folder, run: `C:\Users\[YOUR USER]\[YOUR PROJECT NAME]>` `python -m pip install -e source/[YOUR PROJECT NAME]` - eg: `C:\Users\[YOUR USER]\MyIsaacLabProject>` `python -m pip install -e source/MyIsaacLabProject`
  
- - This installs your project as a Python package in your local Python environment (`env_isaaclab` in this example) - making your project's code discoverable by Python and importable as a library.  `pip install -e` adds your project folder to Python's search path within that specific conda environment. Now Python knows: "when someone imports your_project, look in `/path/to/your/project`"
- - The installation process registers the tasks inside the task folder (and any new task added there) so that train.py (inside the script folder) can import and run them.
- - Because my project is registered in the python env, you now can have train.py import the tasks inside the task folder: inside train.py (in your external project) you will see `import MyIsaacLabProject.tasks`
+ - This installs your project as a Python package in your local Python environment (`env_isaaclab` in this example) - making your project's code discoverable by Python and importable as a library.
+   - `pip install -e` adds your project folder to Python's search path within that specific conda environment. Now Python knows: "when someone imports your_project, look in `/path/to/your/project`"
+ - The installation process makes all tasks inside the task folder (including your custom task) importable by the train.py script.
+   - Inside `"C:\Users\[YOUR USER]\MyIsaacLabProject6\scripts\rsl_rl\train.py"` you will see `import MyIsaacLabProject.tasks`.
+   - This triggers `gym.register()` which registers your task in Gymnasium, allowing it to be found by the IsaacLab RL train.py script.
+ - When you run `train.py --task=Template-MyIsaacLabProject-Direct-v0`, it looks that task ID up in Gymnasium's registry, builds the registered env, and trains it. 
+- Summary: `external project creation > project installation > makes it discoverable inside your Python env > allows it to be imported in train.py > at runtime, this import triggers gym.register() > registers task on Gymnasium > allows it to be found and trained by the train.py script.`
+
 
 - List available environments with `C:\Users\[YOUR USER]\[YOUR PROJECT NAME]>python scripts/list_envs.py` : `python scripts/list_envs.py` 
 - you should see your project and tasks listed
