@@ -11,7 +11,7 @@
 
 Let's say you want to create your own IsaacLab task: simulate a task of your choice, modify the Reinforcement Learning parameters, the robot policies etc. You have 2 options: 
 
-### Option A: Internal Run: (input your code into your local IsaacSim project) 
+### Option A: Internal Run: (modify your local IsaacSim project) 
 After you clone the original IsaacLab project from NVIDIA's GitHub repository, you can modify this instance directly on your local machine, adding your custom task and code to your local IsaacLab project and its folder structure. It becomes available alongside all the built-in tasks:
 
 ```
