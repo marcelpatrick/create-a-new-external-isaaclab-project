@@ -111,7 +111,7 @@ The generated folder (path: `"C:\Users\[YOUR USER]\MyIsaacLabProject\source\MyIs
  
  - This installs your project as a Python package in your local Python environment (`env_isaaclab` in this example) - making your project's code discoverable by Python and importable as a library.  `pip install -e` adds your project folder to Python's search path within that specific conda environment. Now Python knows: "when someone imports your_project, look in `/path/to/your/project`"
  - The installation process registers the tasks inside the task folder (and any new task added there) so that train.py (inside the script folder) can import and run them.
- - Because my project is registered in the python env, you now can have train.py import the tasks inside the task folder: inside train.py (in your external project) you will see `import MyIsaacLabProject6.tasks`
+ - Because my project is registered in the python env, you now can have train.py import the tasks inside the task folder: inside train.py (in your external project) you will see `import MyIsaacLabProject.tasks`
 
 - List available environments with `C:\Users\[YOUR USER]\[YOUR PROJECT NAME]>python scripts/list_envs.py` : `python scripts/list_envs.py` 
 - you should see your project and tasks listed
