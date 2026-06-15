@@ -4,6 +4,8 @@
 - It uses the original IsaacLab project: https://github.com/isaac-sim/IsaacLab.git
 - It allows you to create an External IsaacLab Project
 
+**Video Tutorial**: https://youtu.be/eY7AHGmwhSM 
+
 # Prerequisites: 
 - Install IsaacLab and create a Python environment: https://github.com/marcelpatrick/IsaacSim-IsaacLab-installation-for-Windows-Easy-Tutorial?search=1. 
 
