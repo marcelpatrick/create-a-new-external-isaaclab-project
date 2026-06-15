@@ -118,8 +118,7 @@ C:.
 - Summary: `external project creation > project installation > makes it discoverable inside your Python env > allows it to be imported in train.py > at runtime, this import triggers gym.register() > registers task on Gymnasium > allows it to be found and trained by the train.py script.`
 
 
-- List available environments with `C:\Users\[YOUR USER]\[YOUR PROJECT NAME]>python scripts/list_envs.py` : `python scripts/list_envs.py` 
-- you should see your project and tasks listed
+List available environments with `C:\Users\[YOUR USER]\[YOUR PROJECT NAME]>python scripts/list_envs.py` : `python scripts/list_envs.py` -> you should see your project and tasks listed
 
 # 3. Run a training task
 
