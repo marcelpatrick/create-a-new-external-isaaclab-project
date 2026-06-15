@@ -22,7 +22,7 @@ IsaacLab/
 │   │   │   ├── ... (official built in Isaac Lab tasks)
 │   │   │   └── your_task/  ← You add your stuff here
 ```
-**Problem**: If NVIDIA releases IsaacLab v2.0, you have to merge your changes with their updates manually. You would have to clone the new version to your computer and manually track where changes were made to make sure it works with your task. If they change the folder structure or how other scripts in the project communicate with tasks, it can break your code. Makes it messy to find all the changes they made to the project and how they conflict with your code.
+**Problem**: If NVIDIA releases IsaacLab v2.0, you have to merge your changes with their updates manually. You would have to clone the new version to your computer, transplant your custom task file into the new project folder and manually track where changes were made in the new project to make sure it works with your task. If they change the folder structure or how other scripts in the project communicate with tasks, it can break your code. Makes it messy to find all the changes they made to the project and how they conflict with your code.
 
 ### Option B: External project (your own separate folder)
 Your code lives in its own folder, completely outside the IsaacLab project. Doesn't modify IsaacLab's original folder structure.
