@@ -99,8 +99,9 @@ C:.
                         ├───agents
                         └───mdp
 ```
-. External projects also come with template tasks by default: 
-. The generated folder (path: `"C:\Users\[YOUR USER]\MyIsaacLabProject\source\MyIsaacLabProject\MyIsaacLabProject\tasks\manager_based\MyIsaacLabProject"`) contains some template tasks
+. External projects are generated with the template cartpole task for testing purposes.
+. The generated folder (path: `"C:\Users\[YOUR USER]\MyIsaacLabProject\source\MyIsaacLabProject\MyIsaacLabProject\tasks\manager_based\MyIsaacLabProject"`) actually contains the cartpole task. Rename this folder to `cartpole` for consistency, as we will add different tasks in this folder structure.
+
 
  # 2. Install the Project
  
